@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordcount</title>
+    <style>
+        .count{
+            margin: 50px;
+            padding: 10px;
+            margin-top: 50px;
+            margin-left: 250px;
+        }
+        body{
+            background-image: url(/asset.html/word.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;margin: 70px;margin-top: 200px; margin-left: 300px;">WORD COUNT</h1>
+    <div class="count">
+        <script>
+            function wordcount() {
+               let text = document.getElementById("a").value;
+               let numWords = 0;
+               for (var i = 0; i < text.length; i++) {
+                   var currentCharacter = text[i];
+                   if (currentCharacter == " ") {
+                       numWords += 1;
+                   }
+               }
+               numWords += 1;
+               document.getElementById("show").innerHTML = numWords;
+               }
+       </script>
+       <textarea name="words" id="a" cols="60" rows="5" style="background-color: antiquewhite;">Enter the words</textarea><br> <br>
+       <button onclick="wordcount()" id="show" style="background-color: cornsilk;">Wordcount</button>
+    </div>
+</body>
+</html>
